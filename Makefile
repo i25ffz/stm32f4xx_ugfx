@@ -22,7 +22,7 @@
 # ChibiOS settings
 ifeq ($(OPT_OS),chibios)
 	# See $(GFXLIB)/tools/gmake_scripts/os_chibios_x.mk for the list of variables
-	CHIBIOS					= chibios_3.0.1
+	CHIBIOS					= chibios
 	CHIBIOS_VERSION			= 3
 	CHIBIOS_BOARD			= ST_STM32F429I_DISCOVERY
 	CHIBIOS_CPUCLASS    	= ARMCMx
@@ -52,6 +52,8 @@ LIBS     =
 INCPATH  = 
 LIBPATH  =
 LDSCRIPT = 
+
+BUILDDIR = out
 
 ##############################################################################################
 # These should be at the end

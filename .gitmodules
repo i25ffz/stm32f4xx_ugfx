@@ -1,3 +1,7 @@
 [submodule "ugfx"]
 	path = ugfx
 	url = https://git.ugfx.io/uGFX/uGFX.git
+[submodule "chibios"]
+	path = chibios
+	url = https://github.com/ChibiOS/ChibiOS.git
+	branch = stable_3.0.x
