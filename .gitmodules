@@ -5,3 +5,7 @@
 	path = chibios
 	url = https://github.com/ChibiOS/ChibiOS.git
 	branch = stable_3.0.x
+[submodule "freertos"]
+	path = freertos
+	url = https://github.com/i25ffz/freertos.git
+	branch = stable_v8.2.3
