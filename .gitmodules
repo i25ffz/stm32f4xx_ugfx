@@ -1,6 +1,6 @@
 [submodule "ugfx"]
 	path = ugfx
-	url = https://git.ugfx.io/uGFX/uGFX.git
+	url = https://github.com/i25ffz/ugfx.git
 [submodule "chibios"]
 	path = chibios
 	url = https://github.com/ChibiOS/ChibiOS.git
