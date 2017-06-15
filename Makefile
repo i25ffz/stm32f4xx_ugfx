@@ -6,10 +6,10 @@
 
 # General settings
 	# See $(GFXLIB)/tools/gmake_scripts/readme.txt for the list of variables
-	OPT_OS					= freertos
+	OPT_OS				= freertos
 	OPT_THUMB				= yes
-	OPT_LINK_OPTIMIZE		= no
-	OPT_CPU					= stm32m4
+	OPT_LINK_OPTIMIZE			= no
+	OPT_CPU				= stm32m4
 	# OPT_VERBOSE_COMPILE		= yes
 
 # uGFX settings
@@ -17,21 +17,21 @@
 	GFXLIB					= ugfx
 	GFXBOARD				= STM32F429i-Discovery
 	# GFXDEMO				= modules/gdisp/basics / tools/touch_calibration_grabber / 3rdparty/bubbles
-	GFXDEMO					= 3rdparty/bubbles
+	GFXDEMO				= 3rdparty/bubbles
 	GFXSINGLEMAKE			= no
 
 # ChibiOS settings
 ifeq ($(OPT_OS),chibios)
 	# See $(GFXLIB)/tools/gmake_scripts/os_chibios_x.mk for the list of variables
-	CHIBIOS					= chibios
+	CHIBIOS				= chibios
 	CHIBIOS_VERSION			= 3
 	CHIBIOS_BOARD			= ST_STM32F429I_DISCOVERY
-	CHIBIOS_CPUCLASS		= ARMCMx
-	CHIBIOS_PLATFORM		= STM32
-	CHIBIOS_DEVICE_FAMILY	= STM32F4xx
+	CHIBIOS_CPUCLASS			= ARMCMx
+	CHIBIOS_PLATFORM			= STM32
+	CHIBIOS_DEVICE_FAMILY		= STM32F4xx
 	CHIBIOS_STARTUP			= startup_stm32f4xx
-	CHIBIOS_PORT			= v7m
-	CHIBIOS_LDSCRIPT		= STM32F429xI.ld
+	CHIBIOS_PORT				= v7m
+	CHIBIOS_LDSCRIPT			= STM32F429xI.ld
 endif
 
 # FreeRTOS settings
@@ -40,8 +40,9 @@ ifeq ($(OPT_OS),freertos)
 	# CORTEX_M4F_STM32F429I-DISCO_GCC
 	FREERTOS				= freertos/FreeRTOS
 	FREERTOS_BOARD			= STM32F429I-DISCO
-	FREERTOS_CPUCLASS		= ARM_CM4F
-	FREERTOS_CPUTYPE		= CORTEX_M4F
+	FREERTOS_CPUCLASS			= ARM_CM4F
+	FREERTOS_CPUTYPE			= CORTEX_M4F
+	FREERTOS_LDSCRIPT			= STM32F429ZI_FLASH.ld
 endif
 
 ##############################################################################################
@@ -53,7 +54,7 @@ SRCFLAGS = -ggdb -O1
 CFLAGS   =
 CXXFLAGS = -fno-rtti
 ASFLAGS  =
-LDFLAGS  = 
+LDFLAGS  = -lc -lgcc -lnosys
 # -specs=nano.specs -specs=nosys.specs
 
 ifeq ($(GFXDEMO),)
