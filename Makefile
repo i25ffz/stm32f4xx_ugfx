@@ -6,7 +6,7 @@
 
 # General settings
 	# See $(GFXLIB)/tools/gmake_scripts/readme.txt for the list of variables
-	OPT_OS				= freertos
+	OPT_OS				= chibios
 	OPT_THUMB				= yes
 	OPT_LINK_OPTIMIZE			= no
 	OPT_CPU				= stm32m4
@@ -54,7 +54,7 @@ SRCFLAGS = -ggdb -O1
 CFLAGS   =
 CXXFLAGS = -fno-rtti
 ASFLAGS  =
-LDFLAGS  = -lc -lgcc -lnosys
+LDFLAGS  =
 # -specs=nano.specs -specs=nosys.specs
 
 ifeq ($(GFXDEMO),)

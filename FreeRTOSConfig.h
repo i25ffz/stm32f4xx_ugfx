@@ -113,7 +113,7 @@
 #define configCHECK_FOR_STACK_OVERFLOW  0
 #define configUSE_RECURSIVE_MUTEXES     1
 #define configQUEUE_REGISTRY_SIZE       0
-#define configGENERATE_RUN_TIME_STATS   1
+#define configGENERATE_RUN_TIME_STATS   0
 
 /* Set the following definitions to 1 to include the API function, or zero
 to exclude the API function. */
@@ -175,17 +175,6 @@ NVIC value of 255. */
 #define configNET_MASK1     255
 #define configNET_MASK2     255
 #define configNET_MASK3     0
-
-
-/*-----------------------------------------------------------
- * Macros required to setup the timer for the run time stats.
- *-----------------------------------------------------------*/
-/* The run time stats time base just uses the existing high frequency timer
-test clock.  All these macros do is clear and return the high frequency
-interrupt count respectively. */
-extern unsigned long ulRunTimeStatsClock;
-#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() ulRunTimeStatsClock = 0
-#define portGET_RUN_TIME_COUNTER_VALUE() ulRunTimeStatsClock
 
 
 /* Redefine functions names to match the standard peripheral library */
